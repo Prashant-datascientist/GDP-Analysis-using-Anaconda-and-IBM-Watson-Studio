@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GDP Analysis</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<style type="text/css">
+		  	
+body {
+  background-image: url('https://thumbs.dreamstime.com/b/gdp-gross-domestic-product-%C3%A2%E2%82%AC-business-concept-graph-us-quarters-word-isolated-white-background-59738353.jpg');
+}
+
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+				 <div class="page-header">
+    				<h1>GDP Analysis</h1>
+  				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<form action="/data_predict" method="POST">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="Pop">Population:</label>
+							    <input type="text" class="form-control" id="Pop" name="Pop" placeholder="Range 7026 to 1313973713">
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="Area">Area (sq. mi.):</label>
+							    <input type="text" class="form-control" id="Area" name="Area" placeholder="Range 2 to 17075200">
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="Pop_D">Population Density (per sq. mi.):</label>
+							    <input type="text" class="form-control" id="Pop_D" name="Pop_D" placeholder="Range 0.0 to 16271.5">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="Coastline">Coastline (coast/area ratio):</label>
+							    <input type="text" class="form-control" id="Coastline" name="Coastline" placeholder="Range 0.0 to 870.66">
+							</div>
+						</div>
+					</div>
+
+
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="Net_migration ">Net migration :</label>
+							    <input type="text" class="form-control" id="Net_migration " name="Net_migration " placeholder="Range -20.99 to 23.06">
+							</div>
+						</div>
+						
+				
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="Infant_mortality">Infant mortality (per 1000 births):</label>
+							    <input type="text" class="form-control" id="Infant_mortality" name="Infant_mortality" placeholder="Range 2.29 to 191.19">
+							</div>
+						</div>
+						</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="Literacy">Literacy (%):</label>
+							    <input type="text" class="form-control" id="Literacy" name="Literacy" placeholder="Range 17.6, 100.0">
+							</div>
+						</div>
+						
+				
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="Arable">Arable (%):</label>
+							    <input type="text" class="form-control" id="Arable" name="Arable" placeholder="Range 50.0, 62.11">
+							</div>
+						</div>
+						</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="Crops">Crops (%):</label>
+							    <input type="text" class="form-control" id="Crops" name="Crops" placeholder="Range 0.0, 50.68">
+							</div>
+						</div>
+						
+				
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="Deathrate">Deathrate:</label>
+							    <input type="text" class="form-control" id="Deathrate" name="Deathrate" placeholder="Range 2.29, 29.74">
+							</div>
+						</div>
+						</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="Agriculture">Agriculture:</label>
+							    <input type="text" class="form-control" id="Agriculture" name="Agriculture" placeholder="Range 0.0, 0.769">
+							</div>
+						</div>
+						
+				
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="Industry">Industry:</label>
+							    <input type="text" class="form-control" id="Industry" name="Industry" placeholder="Range 0.02, 0.9059999999999999">
+							</div>
+						</div>
+						</div>																																									
+                   <div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="Service">Service:</label>
+							    <input type="text" class="form-control" id="Service" name="Service" placeholder="Range 0.062, 0.9540000000000001">
+							</div>
+						</div>
+					
+
+					
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="Region_label">Region_label:</label>
+							    <select name="Region_label" class="form-control" id="Region_label">
+							        <option value="0">ASIA</option>
+							        <option value="1">BALTICS</option>
+                                    <option value="2">C.W. OF IND. STATES</option>
+                                    <option value="3">EASTERN EUROPE</option>
+                                    <option value="4">LATIN AMER. & CARIB</option>
+                                    <option value="5">NEAR EAST</option>
+                                    <option value="6">NORTHERN AFRICA</option>
+                                    <option value="7">NORTHERN AMERICA</option>
+                                    <option value="8">OCEANIA</option>
+                                    <option value="9">SUB-SAHARAN AFRICA</option>
+                                    <option value="10">WESTERN EUROPE</option>
+                                </select>   
+							 
+							   </div>
+							   </div>
+							   </div> 
+							    
+							    
+					
+					
+					
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="Climate_label">Climate_label:</label>
+							    <select  class="form-control" id="Climate_label" name="Climate_label">
+							    <option value="0">1.</option>
+			                    <option value="1">1.5</option>
+                                <option value="2">2.</option>
+                                <option value="3">2.5</option>
+                                <option value="4">3.</option>
+                                <option value="5">4.</option>
+                                
+                            </select> 
+							</div>
+						</div>
+						</div>
+
+
+					<button type="submit" class="btn btn-default">Predict</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+             <h1> {{ prediction }}</h1>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script
+</body>
+</html>
